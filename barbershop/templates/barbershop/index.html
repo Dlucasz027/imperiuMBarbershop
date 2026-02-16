@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 </head>
 <body>
 
@@ -17,82 +19,81 @@
             <div class="menu-horizontal">
                 <ul>
                     <li><a href="#home">HOME</a></li>
-                    <li><a href="#services">SERVIÇOS</a></li>
-                    <li><a href="#portfolio">LOCALIZAÇÃO</a></li>
-                    <li><a href="#about">SOBRE NÓS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">FIND US</a></li>
+                    <li><a href="#about">BOOKING</a></li>
                 </ul>
             </div>
         </nav>
         <div class="hero-content">
-            <p><span class="barberia-moldura">• BARBEARIA •</span></p>
+            <p><span class="barberia-moldura">• BARBERSHOP •</span></p>
             <h1>IMPERIUM</h1>
-            <p>BARBA • CABELO • BIGODE</p>
+            <p>BEARD • HAIR • MUSTACHE</p>
         </div>
-
     </header>
 
     <section id="services" class="section light-section">
         <div class="container">
-            <h2>Nossos Serviços e Estilos</h2>
-            <p class="subtitle">A qualidade Imperium em cada detalhe. Veja a tabela de preços e os serviços premium para barba, cabelo e bigode, feitos por profissionais experientes.</p>
+            <h2>Our Services and Styles</h2>
+            <p class="subtitle">Imperium quality in every detail. Check out our price list and premium services for beard, hair, and mustache, provided by experienced professionals.</p>
 
             <div class="services-grid">
                 <div class="service-item">
-                    <i class="bi bi-scissors"></i> <h3>Corte Clássico</h3>
+                    <i class="bi bi-scissors"></i> <h3>Classic Haircut</h3>
                         <img src="{% static 'img/hair_only.jpg' %}" 
                             class="service-img">
-                    <p>Corte de cabelo padrão, com estilo moderno ou tradicional.</p>
-                    <p class="price">R$ 35,00</p>
+                    <p>Standard haircut with a modern or traditional style.</p>
+                    <p class="price">US$ 30,00</p>
                 </div>
 
                 <div class="service-item">
-                    <i class="bi bi-scissors"></i> <h3>Barba Terapia</h3>
+                    <i class="bi bi-droplet"></i> <h3>Beard Therapy</h3>
                         <img src="{% static 'img/beard_only.jpg' %}" 
                             class="service-img">
-                    <p>Modelagem da barba com toalha quente e massagem facial.</p>
-                    <p class="price">R$ 50,00</p>
+                    <p>Beard shaping with hot towel treatment and facial massage.</p>
+                    <p class="price">US$ 50,00</p>
                 </div>
 
                 <div class="service-item">
-                    <i class="bi bi-droplet-half"></i> <h3>Barba + Cabelo</h3>
+                    <i class="bi bi-person"></i> <h3>Hair & Beard Combo</h3>
                         <img src="{% static 'img/hair_and_beard.jpg' %}" 
                             alt="Barba e Cabelo"
                             class="service-img">
-                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
-                    <p class="price">R$ 80,00</p>
+                    <p>Complete package: haircut, beard grooming, and finishing styling.</p>
+                    <p class="price">US$ 75,00</p>
                 </div>
 
                 <div class="service-item">
-                    <i class="bi bi-droplet-half"></i> <h3>Sobrancelhas</h3>
+                    <i class="bi bi-brush"></i> <h3>Eyebrow Grooming</h3>
                         <img src="{% static 'img/eyebrows.png' %}" 
                             class="service-img">
-                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
-                    <p class="price">R$ 80,00</p>
+                    <p>Eyebrow trimming and shaping for a polished, sharp look</p>
+                    <p class="price">US$ 20,00</p>
                 </div>
 
                 <div class="service-item">
-                    <i class="bi bi-droplet-half"></i> <h3>Corte Kids</h3>
+                    <i class="bi bi-emoji-smile"></i> <h3>Kids Haircut</h3>
                         <img src="{% static 'img/children_haircut.jpg' %}" 
                             class="service-img">
-                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
-                    <p class="price">R$ 80,00</p>
+                    <p>Haircut for children with care, precision, and a friendly environment.</p>
+                    <p class="price">US$ 25,00</p>
                 </div>
 
                 <div class="service-item">
-                    <i class="bi bi-droplet-half"></i> <h3>Limpeza Facial</h3>
+                    <i class="bi bi-droplet-half"></i> <h3>Facial Treatment</h3>
                         <img src="{% static 'img/skincare.png' %}" 
                             class="service-img">
-                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
-                    <p class="price">R$ 80,00</p>
+                    <p>Complete facial care package: cleansing, exfoliation, and moisturizing.</p>
+                    <p class="price">US$ 35,00</p>
                 </div>
             </div>
 
             <div class="hours-info">
-                <h3>Horário de Atendimento</h3>
+                <h3>Business Hours</h3>
                 <ul>
-                    <li>Segunda a Sexta: 09:00h às 19:00h</li>
-                    <li>Sábado: 08:00h às 16:00h</li>
-                    <li>Domingo e Feriados: Fechado</li>
+                    <li>Monday to Friday: 9:00 AM - 7:00 PM</li>
+                    <li>Saturday: 8:00 AM - 4:00 PM</li>
+                    <li>Sunday & Holidays: Closed</li>
                 </ul>
             </div>
 
@@ -102,9 +103,9 @@
     <section class="section dark-section">
         <div class="container dark-content">
             <div class="text-block">
-                <h3>Ambiente Personalizado para sua Experiência</h3>
-                <p>Pensamos em cada detalhe do ambiente para garantir seu máximo conforto e satisfação. Combinamos um design clássico com a excelência do serviço, criando um espaço onde sua experiência é a prioridade.</p>
-                <button class="cta-button">Agende seu Horário</button>
+                <h3>Your Comfort, Our Priority</h3>
+                <p>We’ve designed every detail of our space to ensure your maximum comfort and satisfaction. Combining classic design with top-quality service, we create a place where your experience always comes first.</p>
+                <button class="cta-button">Book Your Appointment</button>
             </div>
             <div class="logos-placeholder">
                 <img src="{% static 'img/barbershop.jpeg' %}" alt="Ambiente retro da Barbearia Imperium">
@@ -114,12 +115,12 @@
 
     <section id="location" class="section light-section location-section">
         <div class="container dark-content"> <div class="text-block">
-                <h3>Visite a Imperium</h3>
-                <p>Estamos localizados no coração de Vitória, com fácil acesso e estacionamento nas proximidades. Venha nos conhecer!</p>
+                <h3>Visit Imperium</h3>
+                <p>We’re located in the heart of Vitória, with easy access and nearby parking. Come and see us!</p>
                 <p class="address-info">
-                    Endereço: Avenida Nossa Senhora da Penha, 2000, Centro, Vitória - ES, 29050-385
+                    Address: Avenida Nossa Senhora da Penha, 2000, Centro, Vitória - ES, 29050-385
                 </p>
-                <button class="cta-button">Ver no Google Maps</button>
+                <button class="cta-button">View on Google Maps</button>
             </div>
 
             <div class="map-placeholder">
@@ -135,18 +136,26 @@
         </div>
     </section>
 
-        <section class="section dark-section">
+    <section class="section dark-section calendar-section">
         <div class="container dark-content">
-            <div class="text-block">
-                <h3>Calendar</h3>
+
+            <div class="calendar-header">
+                <h3>Book Your Spot Today</h3>
+                <p class="calendar-subtitle">
+                    Pick a date and reserve your appointment at Imperium BarberShop.
+                </p>
+                <button class="cta-button">Book via WhatsApp</button>
             </div>
+
             <div class="calendar-placeholder">
+                <div id="calendar"></div>
             </div>
+
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Minimal Agency. All rights reserved.</p>
+        <p>© imperiuM Barbershop</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
