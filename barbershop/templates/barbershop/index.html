@@ -39,16 +39,49 @@
             <div class="services-grid">
                 <div class="service-item">
                     <i class="bi bi-scissors"></i> <h3>Corte Clássico</h3>
+                        <img src="{% static 'img/hair_only.jpg' %}" 
+                            class="service-img">
                     <p>Corte de cabelo padrão, com estilo moderno ou tradicional.</p>
                     <p class="price">R$ 35,00</p>
                 </div>
+
                 <div class="service-item">
-                    <i class="bi bi-bristles"></i> <h3>Barba Terapia</h3>
+                    <i class="bi bi-scissors"></i> <h3>Barba Terapia</h3>
+                        <img src="{% static 'img/beard_only.jpg' %}" 
+                            class="service-img">
                     <p>Modelagem da barba com toalha quente e massagem facial.</p>
                     <p class="price">R$ 50,00</p>
                 </div>
+
                 <div class="service-item">
                     <i class="bi bi-droplet-half"></i> <h3>Barba + Cabelo</h3>
+                        <img src="{% static 'img/hair_and_beard.jpg' %}" 
+                            alt="Barba e Cabelo"
+                            class="service-img">
+                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
+                    <p class="price">R$ 80,00</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="bi bi-droplet-half"></i> <h3>Sobrancelhas</h3>
+                        <img src="{% static 'img/eyebrows.png' %}" 
+                            class="service-img">
+                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
+                    <p class="price">R$ 80,00</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="bi bi-droplet-half"></i> <h3>Corte Kids</h3>
+                        <img src="{% static 'img/children_haircut.jpg' %}" 
+                            class="service-img">
+                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
+                    <p class="price">R$ 80,00</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="bi bi-droplet-half"></i> <h3>Limpeza Facial</h3>
+                        <img src="{% static 'img/skincare.png' %}" 
+                            class="service-img">
                     <p>Pacote completo: barba, corte de cabelo e finalização.</p>
                     <p class="price">R$ 80,00</p>
                 </div>
@@ -74,7 +107,7 @@
                 <button class="cta-button">Agende seu Horário</button>
             </div>
             <div class="logos-placeholder">
-                <img src="{% static 'img/barbeariaretro.jpeg' %}" alt="Ambiente retro da Barbearia Imperium">
+                <img src="{% static 'img/barbershop.jpeg' %}" alt="Ambiente retro da Barbearia Imperium">
             </div>
         </div>
     </section>
@@ -102,21 +135,15 @@
         </div>
     </section>
 
-    <section class="section quote-section">
-        <div class="container">
-
-        <section id="portfolio" class="section light-section">
-            <div class="container">
-                <h2>Recent work</h2>
-                <div class="filter-buttons">
-                    <button class="active" data-filter="all">ALL</button>
-                    <button data-filter="illustration">ILLUSTRATION</button>
-                    <button data-filter="digital">DIGITAL ART</button>
-                    <button data-filter="graphic">GRAPHIC DESIGN</button>
-                    <button data-filter="web">WEB</button>
-                </div>
-                </div>
-        </section>
+        <section class="section dark-section">
+        <div class="container dark-content">
+            <div class="text-block">
+                <h3>Calendar</h3>
+            </div>
+            <div class="calendar-placeholder">
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2025 Minimal Agency. All rights reserved.</p>
