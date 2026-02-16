@@ -1,0 +1,129 @@
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperium BarberShop</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="menu-horizontal">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#services">SERVIÇOS</a></li>
+                    <li><a href="#portfolio">LOCALIZAÇÃO</a></li>
+                    <li><a href="#about">SOBRE NÓS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <p><span class="barberia-moldura">• BARBEARIA •</span></p>
+            <h1>IMPERIUM</h1>
+            <p>BARBA • CABELO • BIGODE</p>
+        </div>
+
+    </header>
+
+    <section id="services" class="section light-section">
+        <div class="container">
+            <h2>Nossos Serviços e Estilos</h2>
+            <p class="subtitle">A qualidade Imperium em cada detalhe. Veja a tabela de preços e os serviços premium para barba, cabelo e bigode, feitos por profissionais experientes.</p>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="bi bi-scissors"></i> <h3>Corte Clássico</h3>
+                    <p>Corte de cabelo padrão, com estilo moderno ou tradicional.</p>
+                    <p class="price">R$ 35,00</p>
+                </div>
+                <div class="service-item">
+                    <i class="bi bi-bristles"></i> <h3>Barba Terapia</h3>
+                    <p>Modelagem da barba com toalha quente e massagem facial.</p>
+                    <p class="price">R$ 50,00</p>
+                </div>
+                <div class="service-item">
+                    <i class="bi bi-droplet-half"></i> <h3>Barba + Cabelo</h3>
+                    <p>Pacote completo: barba, corte de cabelo e finalização.</p>
+                    <p class="price">R$ 80,00</p>
+                </div>
+            </div>
+
+            <div class="hours-info">
+                <h3>Horário de Atendimento</h3>
+                <ul>
+                    <li>Segunda a Sexta: 09:00h às 19:00h</li>
+                    <li>Sábado: 08:00h às 16:00h</li>
+                    <li>Domingo e Feriados: Fechado</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section dark-section">
+        <div class="container dark-content">
+            <div class="text-block">
+                <h3>Ambiente Personalizado para sua Experiência</h3>
+                <p>Pensamos em cada detalhe do ambiente para garantir seu máximo conforto e satisfação. Combinamos um design clássico com a excelência do serviço, criando um espaço onde sua experiência é a prioridade.</p>
+                <button class="cta-button">Agende seu Horário</button>
+            </div>
+            <div class="logos-placeholder">
+                <img src="{% static 'img/barbeariaretro.jpeg' %}" alt="Ambiente retro da Barbearia Imperium">
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section light-section location-section">
+        <div class="container dark-content"> <div class="text-block">
+                <h3>Visite a Imperium</h3>
+                <p>Estamos localizados no coração de Vitória, com fácil acesso e estacionamento nas proximidades. Venha nos conhecer!</p>
+                <p class="address-info">
+                    Endereço: Avenida Nossa Senhora da Penha, 2000, Centro, Vitória - ES, 29050-385
+                </p>
+                <button class="cta-button">Ver no Google Maps</button>
+            </div>
+
+            <div class="map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7484.083156282736!2d-40.320480162527794!3d-20.29854606784511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83d6069bcf647%3A0xff7e4b154f5ca35f!2sDa%20Penha%2C%20Vit%C3%B3ria%20-%20State%20of%20Esp%C3%ADrito%20Santo!5e0!3m2!1sen!2sbr!4v1765658201790!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section quote-section">
+        <div class="container">
+
+        <section id="portfolio" class="section light-section">
+            <div class="container">
+                <h2>Recent work</h2>
+                <div class="filter-buttons">
+                    <button class="active" data-filter="all">ALL</button>
+                    <button data-filter="illustration">ILLUSTRATION</button>
+                    <button data-filter="digital">DIGITAL ART</button>
+                    <button data-filter="graphic">GRAPHIC DESIGN</button>
+                    <button data-filter="web">WEB</button>
+                </div>
+                </div>
+        </section>
+
+    <footer>
+        <p>© 2025 Minimal Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

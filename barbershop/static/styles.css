@@ -1,0 +1,507 @@
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.section {
+    text-align: center;
+}
+
+/* --- HERO SECTION (Topo) --- */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/imghome_barba.jpg') no-repeat center center/cover;
+    filter: blur(1px) grayscale(50%);
+    transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 5px 0;
+    letter-spacing: 5px;
+}
+
+.hero-content p {
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.barberia-moldura {
+    /* 1. Transforma em bloco para aceitar padding e border */
+    display: inline-block;
+
+    /* 2. Padding para dar respiro ao texto e espaço para a borda */
+    padding: 8px 15px;
+
+    /* 3. Borda Simples (A moldura) */
+    border: 1px solid #ffffff; /* Borda branca fina */
+    border-radius: 4px; /* Opcional: Borda levemente arredondada */
+
+    /* 4. Estilo do texto (garantindo que ele fique legível) */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    /* 5. Sombra interna para dar uma leve profundidade (Opcional) */
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Opcional: Se quiser que o título "BARBEARIA" fique ligeiramente acima */
+.hero-content p:first-child {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    /* AJUSTAR AQUI: Reduza o margin-bottom */
+    margin-bottom: 1px; /* De 20px para 5px (ou ajuste conforme seu gosto) */
+}
+
+/* --- NAVBAR --- */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s;
+    display: inline-block;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+    transform: scale(1.30);
+}
+/* --- SEÇÃO DE PREÇOS --- */
+
+.light-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.light-section .subtitle {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #777;
+}
+
+.services-grid {
+    display: grid;
+    /* 3 Colunas de tamanho igual com um espaçamento de 30px entre elas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.service-item {
+    padding: 30px;
+    /* Fundo levemente cinza ou branco */
+    background-color: #f9f9f9;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Efeito sutil de levantar no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: #333; /* Cor principal dos ícones */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.service-item .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222; /* Destaque para o preço */
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* NOVO: Estilos da Seção de Horários */
+.hours-info {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.hours-info h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.hours-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-info ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+/*SESSÃO ESCURA*/
+
+.dark-section {
+    background-color: #222222; /* Fundo escuro */
+    color: #fff;
+    text-align: left;
+}
+
+.dark-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-block {
+    width: 45%;
+    padding-right: 20px;
+}
+
+.text-block h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    color: #b5b5b5; /* Texto cinza claro */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #222222;
+}
+
+.logos-placeholder {
+    width: 45%;
+    height: 220px;
+
+    /* REMOVIDO: Borda tracejada e centralização de texto */
+    border: none;
+    display: block; /* Garante que o container se comporte como um bloco normal */
+
+    /* Adicionado: Força o corte de qualquer conteúdo que extrapolar */
+    overflow: hidden;
+}
+
+/* NOVO: Estilos para a Imagem dentro do Placeholder */
+.logos-placeholder img {
+    width: 100%; /* Ocupa 100% da largura do container (45%) */
+    height: 100%; /* Ocupa 100% da altura do container (200px) */
+
+    /* CRUCIAL: Garante que a imagem cubra todo o container, cortando o excesso */
+    object-fit: cover;
+
+    /* Garante que o canto superior esquerdo da imagem seja o ponto de foco */
+    object-position: center;
+}
+
+/* --- SEÇÃO DE CITAÇÃO --- */
+
+.quote-section {
+    background-color: #f7f7f7;
+    padding: 80px 0;
+}
+
+.quote-section p {
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #555;
+}
+
+.quote-section .author {
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* --- SEÇÃO DE PORTFÓLIO --- */
+
+.filter-buttons {
+    margin: 40px 0;
+}
+
+.filter-buttons button {
+    background: none;
+    border: none;
+    color: #777;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.filter-buttons button.active {
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.7rem;
+}
+
+/* --- LOCALIZAÇÃO --- */
+
+.location-section .container {
+    z-index: 1;
+    position: relative;
+}
+
+.location-section .dark-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.location-section .text-block {
+    width: 45%;
+    padding-right: 20px;
+}
+
+.location-section .text-block h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.location-section .text-block p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.location-section .address-info {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.map-placeholder {
+    width: 45%;
+    height: 350px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.location-section .cta-button {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.location-section .cta-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* --- SEÇÃO DE AVALIAÇÕES (Baseado em dark-section) --- */
+
+.reviews-section {
+    background-color: #222222; /* Fundo escuro igual à seção de ambiente */
+    color: #fff;
+    padding: 80px 0;
+}
+
+.reviews-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.reviews-section .subtitle {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #b5b5b5; /* Cinza claro para subtítulo */
+}
+
+/* GRADE DE TESTEMUNHOS */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.review-item {
+    background-color: #333333; /* Fundo levemente mais claro que a seção */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    height: 100%; /* Garante altura uniforme */
+}
+
+.review-item i.bi-star-fill, .review-item i.bi-star-half {
+    color: #ffc107; /* Cor amarela para estrelas */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.review-item .review-text {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.review-item .review-author {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* FORMULÁRIO DE AVALIAÇÃO */
+.review-form-container h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.review-form textarea, .review-form input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fff;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.review-form .cta-button {
+    /* Reutiliza o estilo do botão e inverte as cores para destaque na seção escura */
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #222222;
+}
+
+.review-form .cta-button:hover {
+    background-color: transparent;
+    color: #fff;
+}
